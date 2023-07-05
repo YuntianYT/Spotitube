@@ -9,6 +9,7 @@ import { MdOutlineAccessTime, MdOutlineAccessTimeFilled } from 'react-icons/md';
 import { PiPlaylistDuotone, PiPlaylistFill } from 'react-icons/pi';
 import MenuItem from './MenuItem';
 import { useLocation } from 'react-router-dom';
+import { PAGE } from '../env';
 
 function Sidebar() {
   const location = useLocation();
@@ -16,40 +17,40 @@ function Sidebar() {
 
   return (
     <div className='hidden md:flex w-16 h-auto flex-col items-center px-0.5'>
-      <MenuItem path='/profile'>
-        {pathname === '/profile' ? (
+      <MenuItem path={PAGE.HOME}>
+        {pathname === PAGE.HOME ? (
           <HiUser className='text-2xl' />
         ) : (
           <HiOutlineUser className='text-2xl' />
         )}
-        <span className='text-[0.7rem]'>Profile</span>
+        <span className='text-[0.7rem]'>Home</span>
       </MenuItem>
-      <MenuItem path='/artists'>
-        {pathname === '/artists' ? (
+      <MenuItem path={PAGE.ARTISTS}>
+        {pathname === PAGE.ARTISTS ? (
           <PiMicrophoneStageFill className='text-2xl' />
         ) : (
           <PiMicrophoneStageDuotone className='text-2xl' />
         )}
         <span className='text-[0.7rem]'>Artists</span>
       </MenuItem>
-      <MenuItem path='/tracks'>
-        {pathname === '/tracks' ? (
+      <MenuItem path={PAGE.TRACKS}>
+        {pathname === PAGE.TRACKS ? (
           <IoMusicalNotesSharp className='text-2xl' />
         ) : (
           <IoMusicalNotesOutline className='text-2xl' />
         )}
         <span className='text-[0.7rem]'>Tracks</span>
       </MenuItem>
-      <MenuItem path='/recent'>
-        {pathname === '/recent' ? (
+      <MenuItem path={PAGE.RECENT}>
+        {pathname === PAGE.RECENT ? (
           <MdOutlineAccessTimeFilled className='text-2xl' />
         ) : (
           <MdOutlineAccessTime className='text-2xl' />
         )}
         <span className='text-[0.7rem]'>Recent</span>
       </MenuItem>
-      <MenuItem path='/playlists'>
-        {pathname === '/playlists' ? (
+      <MenuItem path={PAGE.ARTISTS}>
+        {pathname === PAGE.ARTISTS ? (
           <PiPlaylistFill className='text-2xl' />
         ) : (
           <PiPlaylistDuotone className='text-2xl' />

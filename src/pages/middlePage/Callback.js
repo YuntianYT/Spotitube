@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import querystring from 'query-string';
 import { getAccessToken } from '../../services/auth';
+import { PAGE } from '../../env';
 
 function Callback() {
   const location = useLocation();
@@ -14,15 +15,15 @@ function Callback() {
     const fetchAccessToken = async () => {
       const res = await getAccessToken(parsedParams.code);
       if (res.status === 200) {
-        navigate('/profile');
+        navigate(PAGE.HOME);
       } else {
         const errorMessage = res.error;
         console.error(errorMessage);
       }
     };
     if (parsedParams.state === null || parsedParams.state !== storedState) {
-      const errorMessage = 'Something went wrong!';
-      navigate(`/error/${encodeURIComponent(errorMessage)}`);
+      const errorMessage = 'State mismatch';
+      navigate(`${PAGE.ERROR}/${encodeURIComponent(errorMessage)}`);
     } else {
       localStorage.removeItem('spotify_auth_state');
       fetchAccessToken();

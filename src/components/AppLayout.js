@@ -2,13 +2,14 @@ import React, { useEffect } from 'react';
 import Header from './Header';
 import { Outlet, useNavigate } from 'react-router-dom';
 import Sidebar from './Sidebar';
+import { PAGE } from '../env';
 
 function AppLayout() {
   const navigate = useNavigate();
   const access_token = localStorage.getItem('access_token');
   useEffect(() => {
     if (!access_token) {
-      navigate('/login');
+      navigate(PAGE.LOGIN);
       localStorage.clear();
     }
   });

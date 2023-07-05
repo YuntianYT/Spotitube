@@ -5,3 +5,15 @@ export const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
 export const HOMEPAGE_URL = process.env.REACT_APP_HOMEPAGE_URL;
 
 export const STATE_KEY = 'spotify_auth_state';
+
+// page routes
+export const PAGE = {
+  HOME: '/home',
+  RECENT: '/recent',
+  ARTISTS: '/artists',
+  TRACKS: '/tracks',
+  PLAYLISTS: '/playlists',
+  LOGIN: '/login',
+  CALLBACK: '/api/callback',
+  ERROR: '/error',
+};
