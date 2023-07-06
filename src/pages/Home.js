@@ -1,17 +1,38 @@
 import React, { useEffect, useState } from 'react';
 import Loader from '../components/Loader';
-import { getTopTracks } from '../services/spotify';
+import { getTopTracksLong } from '../services/spotify';
+import TracksCard from '../components/TracksCard';
 function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  const [tracks, setTracks] = useState([]);
+  // trackName,
+  // artistName,
+  // albumName,
+  // artistImageURL,
+  // trackImageURL,
   useEffect(() => {
-    getTopTracks()
+    getTopTracksLong()
       .then((res) => {
-        console.log(res);
+        setTracks(res.data.items);
         setIsLoading(false);
       })
       .catch((err) => console.error(err));
-  });
-  return <>{isLoading ? <Loader /> : <div>Home</div>}</>;
+  }, []);
+  return (
+    <>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <>
+          <div className='p-2 flex flex-wrap gap-5'>
+            {tracks?.map((track) => (
+              <TracksCard key={track.id} track={track} />
+            ))}
+          </div>
+        </>
+      )}
+    </>
+  );
 }
 
 export default Home;

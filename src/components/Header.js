@@ -1,17 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { BsSpotify } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { logout } from '../services/auth';
-import { getUser } from '../services/spotify';
+import { UserContext } from '../context/UserContext';
 
 function Header() {
-  const [user, setUser] = useState(null);
-  useEffect(() => {
-    getUser()
-      .then((res) => setUser(res.data))
-      .catch((err) => console.error(err));
-  }, []);
+  const user = useContext(UserContext);
   return (
     <div className='flex items-center justify-between p-3'>
       <div className='flex items-center'>
