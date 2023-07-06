@@ -49,8 +49,8 @@ function Sidebar() {
         )}
         <span className='text-[0.7rem]'>Recent</span>
       </MenuItem>
-      <MenuItem path={PAGE.ARTISTS}>
-        {pathname === PAGE.ARTISTS ? (
+      <MenuItem path={PAGE.PLAYLISTS}>
+        {pathname === PAGE.PLAYLISTS ? (
           <PiPlaylistFill className='text-2xl' />
         ) : (
           <PiPlaylistDuotone className='text-2xl' />
