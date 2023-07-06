@@ -16,7 +16,7 @@ function Sidebar() {
   const { pathname } = location;
 
   return (
-    <div className='hidden md:flex w-16 flex-col items-center px-0.5'>
+    <div className='hidden md:flex min-w-[64px] flex-col items-center px-0.5'>
       <MenuItem path={PAGE.HOME}>
         {pathname === PAGE.HOME ? (
           <HiHome className='text-2xl' />
