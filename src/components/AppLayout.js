@@ -24,11 +24,11 @@ function AppLayout() {
   return (
     <div className='flex flex-col h-screen'>
       <UserContext.Provider value={user}>
-        <Header className='flex-none' />
-        <div className='flex flex-grow'>
+        <Header />
+        <div className='flex'>
           <Sidebar />
           <div className='flex-grow overflow-auto scrollbar-thin scrollbar-rounded-full scrollbar-thumb-rounded scrollbar-thumb-gray-700 '>
-            <div className='h-80'>
+            <div className='h-[93vh]'>
               <Outlet />
             </div>
           </div>

@@ -9,7 +9,7 @@ function TracksCard({ track }) {
   return (
     <div className='min-w-[320px] max-w-[360px] mb-10 flex-1'>
       <div className='flex flex-col cursor-pointer'>
-        <div className='relative flex justify-center bg-gray-400 rounded-2xl hover:rounded-none transition-all duration-300'>
+        <div className='relative flex justify-center bg-gray-200 rounded-2xl hover:rounded-none hover:bg-black transition-all duration-500'>
           <img
             className='h-48 w-48'
             src={track?.album?.images[0]?.url}

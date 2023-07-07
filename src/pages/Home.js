@@ -5,11 +5,6 @@ import TracksCard from '../components/TracksCard';
 function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [tracks, setTracks] = useState([]);
-  // trackName,
-  // artistName,
-  // albumName,
-  // artistImageURL,
-  // trackImageURL,
   useEffect(() => {
     getTopTracksLong()
       .then((res) => {
@@ -24,7 +19,7 @@ function Home() {
         <Loader />
       ) : (
         <>
-          <div className='p-2 flex flex-wrap gap-5'>
+          <div className='p-6 flex flex-wrap justify-center gap-5'>
             {tracks?.map((track) => (
               <TracksCard key={track.id} track={track} />
             ))}
