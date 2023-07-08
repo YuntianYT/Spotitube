@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../context/UserContext';
-import { getFollowing, getUserCardInfo } from '../services/spotify';
+import { getUserCardInfo } from '../services/spotify';
 
 function UserCard() {
   const user = useContext(UserContext);

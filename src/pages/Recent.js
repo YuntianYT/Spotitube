@@ -19,14 +19,14 @@ function Recent() {
       {isLoading ? (
         <Loader />
       ) : (
-        <div className='flex justify-between'>
-          <div className='flex flex-col py-5 pl-60 pr-10 flex-grow'>
+        <div className='flex justify-between px-16 md:px-36 lg:px-60'>
+          <div className='flex flex-col py-5 flex-grow'>
             <div className='font-semibold text-lg mb-8'>Recently played</div>
             {tracks?.map((track) => (
               <RecentTracksCard key={track.track.id} item={track} />
             ))}
           </div>
-          <div className='mt-10 mr-64 h-48 p-10'>
+          <div className='hidden min-[1400px]:inline mt-10 h-48 p-10'>
             <UserCard />
           </div>
         </div>
