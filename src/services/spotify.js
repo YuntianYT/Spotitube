@@ -21,6 +21,17 @@ export const getTopArtistsLong = () => {
   return customAxios.get('/me/top/artists?time_range=long_term');
 };
 
+export const getUserCardInfo = async () => {
+  try {
+    const results = await Promise.all([getFollowing(), getPlaylists()]);
+    const followedArtists = results[0].data;
+    const playlist = results[1].data;
+    return { followedArtists, playlist };
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};
 // export const getUserInfo = () => {
 //   axios
 //     .all([

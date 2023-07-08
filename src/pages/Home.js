@@ -18,13 +18,11 @@ function Home() {
       {isLoading ? (
         <Loader />
       ) : (
-        <>
-          <div className='p-6 flex flex-wrap justify-center gap-5'>
-            {tracks?.map((track) => (
-              <TracksCard key={track.id} track={track} />
-            ))}
-          </div>
-        </>
+        <div className='p-6 flex flex-wrap justify-center gap-5'>
+          {tracks?.map((track) => (
+            <TracksCard key={track.id} track={track} />
+          ))}
+        </div>
       )}
     </>
   );
