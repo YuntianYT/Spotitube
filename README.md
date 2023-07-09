@@ -63,3 +63,8 @@ Start the server
 ```bash
   yarn start
 ```
+
+## Acknowledgements
+Inspired by
+ - [Spotify Profile](https://github.com/bchiang7/spotify-profile)
+ - [MeTube](https://github.com/Sadeedpv/MeTube)
