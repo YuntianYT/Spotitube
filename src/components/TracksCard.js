@@ -1,10 +1,6 @@
 import React from 'react';
 import { formatDuration } from '../utils/timeUtils';
-// trackName,
-// artistName,
-// albumName,
-// artistImageURL,
-// trackImageURL,
+
 function TracksCard({ track }) {
   return (
     <div className='min-w-[320px] max-w-[360px] mb-10 flex-1'>

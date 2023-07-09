@@ -17,6 +17,14 @@ export const getTopTracksLong = () => {
   return customAxios.get('/me/top/tracks?time_range=long_term');
 };
 
+export const getTopTracksMedium = () => {
+  return customAxios.get('/me/top/tracks?time_range=medium_term');
+};
+
+export const getTopTracksShort = () => {
+  return customAxios.get('/me/top/tracks?time_range=short_term');
+};
+
 export const getTopArtistsLong = () => {
   return customAxios.get('/me/top/artists?time_range=long_term');
 };
