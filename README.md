@@ -1,4 +1,4 @@
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+![Logo](https://i.imgur.com/HxAb2Q5.jpeg)
 
 # Spotitube
 
@@ -18,7 +18,11 @@ Feel free to explore this unique web application that brings together the best o
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://i.imgur.com/9U6djTv.jpeg)
+
+![App Screenshot](https://i.imgur.com/GMFSaYf.jpeg)
+
+![App Screenshot](https://i.imgur.com/ZtLgrPf.jpeg)
 
 ## Environment Variables
 
