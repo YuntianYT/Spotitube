@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Spotitube
 
-## Available Scripts
+A Spotify looks like YouTube! While there are numerous repositories for Spotify clones or YouTube clones, I noticed the absence of a repository combining the design of YouTube with the content of Spotify, which I found intriguing. As a result, I decided to create this project to fill that gap.
 
-In the project directory, you can run:
+Feel free to explore this unique web application that brings together the best of both worlds: the visual appeal of YouTube and the music streaming experience of Spotify. It offers a fresh and exciting way to discover and enjoy music.
 
-### `yarn start`
+## Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Click here to check out the Demo](https://spotify-youtube.vercel.app/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `yarn test`
+**Front-end:** React, TailwindCSS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Back-end:** [Spotify API](https://developer.spotify.com/documentation/web-api)
 
-### `yarn build`
+## Screenshots
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Environment Variables
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run this project, you will need to add the following environment variables to your .env file
 
-### `yarn eject`
+`REACT_APP_CLIENT_ID`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+`REACT_APP_CLIENT_SECRET`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`REACT_APP_HOMEPAGE_URL`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+`REACT_APP_REDIRECT_URI`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+`REACT_APP_SPOTIFY_ACCOUNTS_URL`
 
-## Learn More
+## Run Locally
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Clone the project
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+  git clone https://github.com/YuntianYT/Spotitube.git
+```
 
-### Code Splitting
+Go to the project directory
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+  cd Spotitube
+```
 
-### Analyzing the Bundle Size
+Install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+  yarn install
+```
 
-### Making a Progressive Web App
+Start the server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+  yarn start
+```
